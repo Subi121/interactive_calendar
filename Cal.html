@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Calendar 2027</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter&family=Great+Vibes&display=swap');
+
+body{
+  margin:0;
+  background:#dcdcdc;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+/* CARD */
+.calendar-card{
+  width:95%;
+  max-width:900px;
+  background:#fff;
+  box-shadow:0 25px 60px rgba(0,0,0,0.3);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+/* SPIRAL */
+.spiral{
+  display:flex;
+  justify-content:space-evenly;
+  background:#e5e5e5;
+  padding:12px;
+}
+
+.ring{
+  width:14px;
+  height:24px;
+  border:3px solid #555;
+  border-radius:50%;
+  background:linear-gradient(#aaa,#666);
+}
+
+/* IMAGE */
+.hero{
+  height:50vh;
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* TORN EFFECT */
+.torn{
+  height:35px;
+  background:linear-gradient(to right,#0b3d5c,#2c6e91);
+  clip-path:polygon(
+    0% 0%,5% 100%,10% 70%,15% 100%,20% 60%,25% 100%,
+    30% 70%,35% 100%,40% 60%,45% 100%,50% 70%,
+    55% 100%,60% 60%,65% 100%,70% 70%,75% 100%,
+    80% 60%,85% 100%,90% 70%,95% 100%,100% 0%
+  );
+}
+
+/* CONTENT */
+.content{
+  padding:25px;
+}
+
+.year{
+  font-family:'Playfair Display';
+  font-size:24px;
+}
+
+.month{
+  font-family:'Playfair Display';
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+/* GRID */
+.days,.dates{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  text-align:center;
+}
+
+.days div{
+  font-size:13px;
+  color:#666;
+}
+
+.dates div{
+  padding:10px;
+  font-size:15px;
+}
+
+.sat,.sun{
+  color:#2c6e91;
+}
+
+/* QUOTE */
+.quote{
+  margin-top:25px;
+  font-family:'Great Vibes',cursive;
+  font-size:32px;
+  color:#c6a96b;
+}
+
+/* NOTES */
+.notes{
+  margin-top:20px;
+  font-style:italic;
+}
+
+.lines{
+  height:80px;
+  background:repeating-linear-gradient(
+    white,
+    white 22px,
+    #ccc 23px
+  );
+}
+
+/* NAV */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+}
+
+button{
+  background:#0b3d5c;
+  color:white;
+  border:none;
+  padding:8px 18px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .hero{height:30vh;}
+  .month{font-size:28px;}
+  .quote{font-size:22px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="calendar-card">
+
+<div class="spiral" id="spiral"></div>
+
+<div class="hero">
+  <img id="image">
+</div>
+
+<div class="torn"></div>
+
+<div class="content">
+  <div class="year">2027</div>
+  <div class="month" id="month"></div>
+
+  <div class="days" id="days"></div>
+  <div class="dates" id="dates"></div>
+
+  <div class="quote" id="quote"></div>
+
+  <div class="notes">Notes</div>
+  <div class="lines"></div>
+</div>
+
+<div class="nav">
+  <button onclick="changeMonth(-1)">Prev</button>
+  <button onclick="changeMonth(1)">Next</button>
+</div>
+
+</div>
+
+<script>
+const months=[
+"January","February","March","April","May","June",
+"July","August","September","October","November","December"
+];
+
+/* 30+ HIGH QUALITY IMAGES */
+const images=Array.from({length:40},(_,i)=>
+`https://picsum.photos/seed/premium${i}/1600/1000`
+);
+
+/* 30+ DEEP QUOTES */
+const quotes=[
+"Climb mountains not so the world can see you, but so you can see the world.",
+"Silence is where the strongest answers are born.",
+"Growth begins at the edge of comfort.",
+"Light enters where effort exists.",
+"Peace is a decision, not a destination.",
+"Still waters run deep within us.",
+"Dreams demand discipline.",
+"Small steps shape great journeys.",
+"The sky teaches us to stay limitless.",
+"Time reveals what effort builds.",
+"Strength grows quietly.",
+"Purpose fuels persistence.",
+"Every sunrise rewrites your story.",
+"Calm minds create powerful futures.",
+"Depth matters more than speed.",
+"Let your soul breathe.",
+"Patience is hidden strength.",
+"Beauty lives in simplicity.",
+"Your path is your power.",
+"Consistency creates miracles.",
+"Hope whispers even in silence.",
+"Focus shapes reality.",
+"Effort writes destiny.",
+"Storms build resilience.",
+"Truth stands quietly strong.",
+"Moments create meaning.",
+"Discipline unlocks freedom.",
+"Kindness echoes forever.",
+"Balance brings clarity.",
+"Stillness creates vision",
+"Rise beyond limits",
+"Find strength in calm",
+"Create your own horizon"
+];
+
+let currentMonth=0;
+const year=2027;
+
+const dayNames=["MON","TUE","WED","THU","FRI","SAT","SUN"];
+
+/* CREATE SPIRAL */
+for(let i=0;i<14;i++){
+  let r=document.createElement("div");
+  r.className="ring";
+  document.getElementById("spiral").appendChild(r);
+}
+
+function render(){
+  document.getElementById("month").innerText=months[currentMonth];
+
+  /* RANDOM IMAGE + QUOTE */
+  document.getElementById("image").src=
+    images[Math.floor(Math.random()*images.length)];
+
+  document.getElementById("quote").innerText=
+    quotes[Math.floor(Math.random()*quotes.length)];
+
+  const daysEl=document.getElementById("days");
+  const datesEl=document.getElementById("dates");
+
+  daysEl.innerHTML="";
+  datesEl.innerHTML="";
+
+  dayNames.forEach(d=>{
+    let div=document.createElement("div");
+    div.innerText=d;
+    daysEl.appendChild(div);
+  });
+
+  let firstDay=new Date(year,currentMonth,1).getDay();
+  firstDay=(firstDay===0)?6:firstDay-1;
+
+  let daysInMonth=new Date(year,currentMonth+1,0).getDate();
+
+  for(let i=0;i<firstDay;i++){
+    datesEl.appendChild(document.createElement("div"));
+  }
+
+  for(let d=1;d<=daysInMonth;d++){
+    let div=document.createElement("div");
+    div.innerText=d;
+
+    let dayIndex=(firstDay+d-1)%7;
+    if(dayIndex===5) div.classList.add("sat");
+    if(dayIndex===6) div.classList.add("sun");
+
+    datesEl.appendChild(div);
+  }
+}
+
+function changeMonth(step){
+  currentMonth+=step;
+  if(currentMonth<0) currentMonth=11;
+  if(currentMonth>11) currentMonth=0;
+  render();
+}
+
+render();
+</script>
+
+</body>
+</html>
