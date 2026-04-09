@@ -2,7 +2,7 @@
 
 Interactive Calendar 2027 is a frontend application developed using HTML, CSS, and Vanilla JavaScript that displays a dynamic calendar with month navigation, images, and quotes. The project demonstrates basic JavaScript logic, DOM manipulation, and responsive UI design.
 
----
+
 
 ### Tech Stack  
 
@@ -10,7 +10,7 @@ Interactive Calendar 2027 is a frontend application developed using HTML, CSS, a
 - CSS  
 - JavaScript  
 
----
+
 
 ### Features  
 
@@ -21,7 +21,7 @@ Interactive Calendar 2027 is a frontend application developed using HTML, CSS, a
 - Display motivational quotes  
 - Highlight weekends (Saturday and Sunday)  
 
----
+
 
 ### Project Structure  
 
@@ -29,7 +29,7 @@ Interactive Calendar 2027 is a frontend application developed using HTML, CSS, a
 - CSS – Styling and layout  
 - JavaScript – Handles logic and interactivity  
 
----
+
 
 ### Modules  
 
@@ -38,7 +38,7 @@ Interactive Calendar 2027 is a frontend application developed using HTML, CSS, a
 - Image – Loads random images  
 - Quote – Displays random quotes  
 
----
+
 
 ### How It Works  
 
@@ -46,7 +46,7 @@ The application renders the calendar using JavaScript.
 When the user clicks navigation buttons, the month changes and dates are updated.  
 Images and quotes are also refreshed dynamically.
 
----
+
 
 ### Learning Outcome  
 
