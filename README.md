@@ -53,9 +53,9 @@ Open `Cal.html` directly in your browser.
 
 ---
 
-## 🎥 Demo
+## 🔗 Live Demo  
 
-Demo Link:  [▶ Watch Demo](https://drive.google.com/file/d/1t8a_l4MmMVed5o1_vsU1DCIDHhqjCfi4/view)
+🎥 Demo Video: [▶ Watch Demo](https://drive.google.com/file/d/1t8a_l4MmMVed5o1_vsU1DCIDHhqjCfi4/view)
 
 ---
 
