@@ -46,6 +46,16 @@ The application renders the calendar using JavaScript.
 When the user clicks navigation buttons, the month changes and dates are updated.  
 Images and quotes are also refreshed dynamically.
 
+.
+### Run the Project
+
+Download or clone the repository
+Open Cal.html in your browser
+
+
+### Demo Video
+
+Add your demo video link here.
 
 
 ### Learning Outcome  
