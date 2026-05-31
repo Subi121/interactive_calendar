@@ -8,6 +8,11 @@
 A lightweight frontend calendar built with pure HTML, CSS, and Vanilla JavaScript. Displays all 12 months of 2027 with dynamic images, motivational quotes, weekend highlighting, and smooth month navigation — no frameworks, no dependencies.
 
 ---
+## 🔗 Live Demo  
+
+🎥 Demo Video: [Watch Demo](https://drive.google.com/file/d/1t8a_l4MmMVed5o1_vsU1DCIDHhqjCfi4/view)
+
+---
 
 ## ✨ Features
 
@@ -51,11 +56,6 @@ cd interactive_calendar
 
 Open `Cal.html` directly in your browser.
 
----
-
-## 🔗 Live Demo  
-
-🎥 Demo Video: [Watch Demo](https://drive.google.com/file/d/1t8a_l4MmMVed5o1_vsU1DCIDHhqjCfi4/view)
 
 ---
 
