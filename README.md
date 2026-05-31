@@ -1,48 +1,74 @@
-## 📅 Interactive Calendar 2027  
+# 📅 Interactive Calendar 2027
 
-Interactive Calendar 2027 is a frontend application developed using HTML, CSS, and Vanilla JavaScript that displays a dynamic calendar with month navigation, images, and quotes. The project demonstrates basic JavaScript logic, DOM manipulation, and responsive UI design.
+![HTML](https://img.shields.io/badge/HTML-5-orange)
+![CSS](https://img.shields.io/badge/CSS-3-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-yellow)
+![Status](https://img.shields.io/badge/status-complete-brightgreen)
 
-### Tech Stack  
+A lightweight frontend calendar built with pure HTML, CSS, and Vanilla JavaScript. Displays all 12 months of 2027 with dynamic images, motivational quotes, weekend highlighting, and smooth month navigation — no frameworks, no dependencies.
 
-- HTML  
-- CSS  
-- JavaScript  
+---
 
-### Features  
+## ✨ Features
 
-- Display all months of the year 2027  
-- Navigate between months using Previous and Next buttons  
-- Automatically calculate days and starting day of each month  
-- Show random images dynamically  
-- Display motivational quotes  
-- Highlight weekends (Saturday and Sunday)  
+* Navigate between months using Prev / Next buttons
+* Auto-calculates correct starting day and total days per month
+* Highlights **Saturday** and **Sunday** in blue
+* Loads a random image each month via Picsum Photos
+* Displays a random motivational quote per month
+* Decorative spiral ring header and torn-paper divider effect
+* Notes section with lined writing area
+* Fully responsive — works on mobile and desktop
 
-### Project Structure  
+---
 
-- HTML – Structure of the calendar  
-- CSS – Styling and layout  
-- JavaScript – Handles logic and interactivity  
+## 🛠️ Tech Stack
 
-### How It Works  
+* HTML5
+* CSS3 (Grid, Clip-path, Google Fonts)
+* Vanilla JavaScript (DOM manipulation, Date API)
 
-The application renders the calendar using JavaScript.  
-When the user clicks navigation buttons, the month changes and dates are updated.  
-Images and quotes are also refreshed dynamically.
+---
 
-### Run the Project  
+## 📂 Project Structure
 
-1. Download or clone the repository  
-2. Open `Cal.html` in your browser  
+```
+calendar-2027/
+├── Cal.html       # Single-file app — HTML + CSS + JS
+└── README.md
+```
 
-### Demo Video  
+---
 
-Add your demo video link here.
+## 🚀 Run the Project
 
-### Learning Outcome  
+No installation or build step needed.
 
-This project helps in understanding:
+```bash
+git clone https://github.com/your-username/calendar-2027.git
+cd calendar-2027
+```
 
-- HTML and CSS design  
-- JavaScript DOM manipulation  
-- Basic date handling logic  
-- Building interactive web applications
+Open `Cal.html` directly in your browser.
+
+---
+
+## 🎥 Demo
+
+> Add your demo video or screenshot link here.
+
+---
+
+## 🚀 Future Improvements
+
+* Add current date highlight for real-time use
+* Support multiple years with year navigation
+* Allow users to add and save notes per day
+* Add dark mode toggle
+* Export calendar as PDF
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
