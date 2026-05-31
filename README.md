@@ -45,8 +45,8 @@ calendar-2027/
 No installation or build step needed.
 
 ```bash
-git clone https://github.com/your-username/calendar-2027.git
-cd calendar-2027
+git clone https://github.com/Subi121/interactive_calendar.git
+cd interactive_calendar
 ```
 
 Open `Cal.html` directly in your browser.
