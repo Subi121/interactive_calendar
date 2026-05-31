@@ -49,9 +49,8 @@ Images and quotes are also refreshed dynamically.
 .
 ### Run the Project
 
-Download or clone the repository
-Open Cal.html in your browser
-
+1. Download or clone the repository  
+2. Open `Cal.html` in your browser  
 
 ### Demo Video
 
