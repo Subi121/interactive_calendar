@@ -10,7 +10,7 @@ A lightweight frontend calendar built with pure HTML, CSS, and Vanilla JavaScrip
 ---
 ## 🔗 Live Demo  
 
-🎥 Demo Video: [Watch Demo](https://drive.google.com/file/d/1t8a_l4MmMVed5o1_vsU1DCIDHhqjCfi4/view)
+🎥 Demo Video: [Watch Demo](https://drive.google.com/file/d/1boJvNR8NRA2OfwtVDplDP6Avo8SrjLs-/view?usp=sharing)
 
 ---
 
