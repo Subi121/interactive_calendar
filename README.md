@@ -1,113 +1,54 @@
-# 🔐 Digital Locker System
+# 📅 Interactive Calendar 2027
 
-![React](https://img.shields.io/badge/React-18-blue)
-![Spring Boot](https://img.shields.io/badge/SpringBoot-Backend-brightgreen)
-![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
-![Jest](https://img.shields.io/badge/Tested%20with-Jest-red)
-![License](https://img.shields.io/badge/license-MIT-green)
-
-A full-stack document management web application built with **React.js** (frontend), **Spring Boot** (backend REST API), and **MySQL** (local database). Users can securely upload, view, and manage their digital documents in one place — no third-party storage, no complexity.
+![HTML](https://img.shields.io/badge/HTML-5-orange)
+![CSS](https://img.shields.io/badge/CSS-3-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-yellow)
+![Status](https://img.shields.io/badge/status-complete-brightgreen)
+A lightweight frontend calendar built with pure HTML, CSS, and Vanilla JavaScript. Displays all 12 months of 2027 with dynamic images, motivational quotes, weekend highlighting, and smooth month navigation — no frameworks, no dependencies.
 
 ---
-
-## 🔗 Live Demo
-🎥 Demo Video: [Watch Demo](#)
+## 🔗 Live Demo  
+🎥 Demo Video: [Watch Demo](https://drive.google.com/file/d/1boJvNR8NRA2OfwtVDplDP6Avo8SrjLs-/view?usp=sharing)
 
 ---
-
 ## ✨ Features
-
-* Upload and securely store digital documents
-* View and manage all uploaded documents
-* Seamless page navigation via React Router
-* Fast API communication using Axios
-* Clean, responsive user interface
-* Dynamic rendering with React state management
-
+* Navigate between months using Prev / Next buttons
+* Auto-calculates correct starting day and total days per month
+* Highlights **Saturday** and **Sunday** in blue
+* Loads a random image each month via Picsum Photos
+* Displays a random motivational quote per month
+* Decorative spiral ring header and torn-paper divider effect
+* Notes section with lined writing area
+* Fully responsive — works on mobile and desktop
 ---
-
 ## 🛠️ Tech Stack
-
-* **Frontend:** React.js, React Router DOM, Axios, CSS
-* **Backend:** Spring Boot, REST APIs
-* **Database:** MySQL (local)
-* **Testing:** Jest, React Testing Library
-
+* HTML5
+* CSS3 (Grid, Clip-path, Google Fonts)
+* Vanilla JavaScript (DOM manipulation, Date API)
 ---
-
 ## 📂 Project Structure
-
 ```
-digital-locker-system/
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Home.jsx
-│   │   │   ├── UploadDocument.jsx
-│   │   │   └── DocumentList.jsx
-│   │   ├── App.js
-│   │   └── index.js
-│   └── package.json
-├── backend/
-│   └── src/main/java/
-│       ├── Controller/
-│       ├── Service/
-│       ├── Entity/
-│       └── Repository/
+calendar-2027/
+├── Cal.html       # Single-file app — HTML + CSS + JS
 └── README.md
 ```
-
 ---
-
-## ⚙️ Setup & Installation
-
-### 🗄️ 1. Database Setup (MySQL)
-
-```sql
-CREATE DATABASE digital_locker_db;
-```
-
-Update `backend/src/main/resources/application.properties`:
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/digital_locker_db
-spring.datasource.username=root
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-```
-
-### 🖥️ 2. Backend (Spring Boot)
-
+## 🚀 Run the Project
+No installation or build step needed.
 ```bash
-cd backend
-mvn spring-boot:run
+git clone https://github.com/Subi121/calendar-2027.git
+cd calendar-2027
 ```
-
-Backend runs at: `http://localhost:8080`
-
-### 🌐 3. Frontend (React)
-
-```bash
-cd frontend
-npm install
-npm start
-```
-
-Frontend runs at: `http://localhost:3000`
+Open `Cal.html` directly in your browser.
 
 ---
-
-## 🔭 Future Enhancements
-
-* JWT Authentication & Role-Based Access Control
-* Document download and deletion from UI
-* File type validation and size limits
-* Cloud storage integration (AWS S3 / Firebase)
-* Docker containerization for easy deployment
-* Global error handling and input validation
-
+## 🔭 Future Improvements
+* Add current date highlight for real-time use
+* Support multiple years with year navigation
+* Allow users to add and save notes per day
+* Add dark mode toggle
+* Export calendar as PDF
 ---
-
 ## 📄 License
-
 This project is licensed under the [MIT License](LICENSE).
+
