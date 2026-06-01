@@ -50,8 +50,8 @@ calendar-2027/
 No installation or build step needed.
 
 ```bash
-git clone https://github.com/Subi121/interactive_calendar.git
-cd interactive_calendar
+git clone https://github.com/Subi121/calendar-2027.git
+cd calendar-2027
 ```
 
 Open `Cal.html` directly in your browser.
@@ -59,7 +59,7 @@ Open `Cal.html` directly in your browser.
 
 ---
 
-## 🚀 Future Improvements
+## 🔭 Future Improvements
 
 * Add current date highlight for real-time use
 * Support multiple years with year navigation
